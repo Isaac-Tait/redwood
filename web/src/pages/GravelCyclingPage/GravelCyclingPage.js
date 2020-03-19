@@ -7,7 +7,7 @@ const GravelCyclingPage = () => {
     <BlogLayout>
 
       <h3>A Gravel Cycling Blog</h3>
-          <p>Built using the venerable (and opinionated) package manager <a href="https://redwoodjs.com/">Redwood</a></p>
+          <p>Built using the venerable (and opinionated) framework <a href="https://redwoodjs.com/">Redwood</a></p>
 
           <BlogPostsCell />
 
