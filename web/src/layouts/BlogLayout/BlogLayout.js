@@ -7,10 +7,20 @@ const BlogLayout = ({ children }) => {
         <h1>
           <Link to={routes.gravelCycling()}>Macadam Grinding</Link>
         </h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to={routes.contact()}>Contact</Link>
+            </li>
+            <li>
+              <Link to={routes.about()}>About</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main>{children}</main>
     </>
   )
-};
+}
 
 export default BlogLayout
