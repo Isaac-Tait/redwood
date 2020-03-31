@@ -1,9 +1,19 @@
-const ContactPage = () => {
+import { Form, TextField, TextAreaField, Submit } from '@redwoodjs/web'
+import BlogLayout from 'src/layouts/BlogLayout'
+
+const ContactPage = (props) => {
+  const onSubmit = (data) => {
+    console.log(data)
+  }
   return (
-    <div>
-      <h1>ContactPage</h1>
-      <p>Find me in ./web/src/pages/ContactPage/ContactPage.js</p>
-    </div>
+    <BlogLayout>
+      <Form onSubmit={onSubmit}>
+        <TextField name="name" placeholder="Enter your Name" />
+        <TextField name="email" placeholder="What is your email?" />
+        <TextAreaField name="Message text" />
+        <Submit>Send</Submit>
+      </Form>
+    </BlogLayout>
   )
 }
 
