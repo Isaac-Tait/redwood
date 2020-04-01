@@ -1,4 +1,10 @@
-import { Form, TextField, TextAreaField, Submit } from '@redwoodjs/web'
+import {
+  Form,
+  TextField,
+  TextAreaField,
+  Submit,
+  FieldError,
+} from '@redwoodjs/web'
 import BlogLayout from 'src/layouts/BlogLayout'
 
 const ContactPage = (props) => {
@@ -7,21 +13,45 @@ const ContactPage = (props) => {
   }
   return (
     <BlogLayout>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit} validation={{ mode: 'onBlur' }}>
         <label htmlFor="name" style={{ display: 'block' }}>
           Name
         </label>
-        <TextField name="name" style={{ display: 'block' }} />
+        <TextField
+          name="name"
+          style={{ display: 'block' }}
+          errorStyle={{ display: 'block', borderColor: 'red' }}
+          validation={{ required: true }}
+        />
+        <FieldError name="name" style={{ color: 'red' }} />
 
         <label htmlFor="email" style={{ display: 'block' }}>
           Email
         </label>
-        <TextField name="email" style={{ display: 'block' }} />
+        <TextField
+          name="email"
+          style={{ display: 'block' }}
+          errorStyle={{ display: 'block', borderColor: 'red' }}
+          validation={{
+            required: true,
+            pattern: {
+              value: /[^@]+@[^.]+\..+/,
+              message: 'Please enter a valid email address',
+            },
+          }}
+        />
+        <FieldError name="name" style={{ color: 'red' }} />
 
         <label htmlFor="message" style={{ display: 'block' }}>
           Message
         </label>
-        <TextAreaField name="message" style={{ display: 'block' }} />
+        <TextAreaField
+          name="message"
+          style={{ display: 'block' }}
+          errorStyle={{ display: 'block', borderColor: 'red' }}
+          validation={{ required: true }}
+        />
+        <FieldError name="name" style={{ color: 'red' }} />
 
         <Submit style={{ display: 'block' }}>Save</Submit>
       </Form>
