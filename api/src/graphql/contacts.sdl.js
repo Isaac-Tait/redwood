@@ -16,6 +16,7 @@ export const schema = gql`
     email: String
     message: String
   }
+
   type Mutation {
     createContact(input: ContactInput!): Contact
   }
