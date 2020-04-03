@@ -9,6 +9,9 @@ const AboutPage = () => {
         This site was created to demonstrate my mastery of Redwood: Look on my
         works, ye mighty, and despair!
       </p>
+      <a href="https://github.com/Isaac-Tait/redwood" target="_blank">
+        Repo
+      </a>
     </BlogLayout>
   )
 }
