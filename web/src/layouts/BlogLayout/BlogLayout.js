@@ -21,8 +21,7 @@ const BlogLayout = ({ children }) => {
       <main>{children}</main>
       <footer>
         <p>
-          {' '}
-          Another
+          Another &nbsp;
           <a href="https://www.mountaintopcoding.com">
             mountainTopCoding(&#9968;);
           </a>{' '}
