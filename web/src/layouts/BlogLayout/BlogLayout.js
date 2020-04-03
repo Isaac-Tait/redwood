@@ -19,6 +19,14 @@ const BlogLayout = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
+      <footer>
+        <p>
+          <a href="https://www.mountaintopcoding.com">
+            mountainTopCoding(&#9968;);
+          </a>{' '}
+          project
+        </p>
+      </footer>
     </>
   )
 }
